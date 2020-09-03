@@ -1,0 +1,35 @@
+type Query {
+    universities: [University]!
+    university(universityId: Int): University
+}
+
+interface Identifiable {
+    id: Int!
+}
+
+type University implements Identifiable {
+    id: Int!
+    name: String!
+    description: String
+    address: String
+    phoneNumber: String
+    faculties: [Faculty]!
+    faculty(facultyId: Int): Faculty
+}
+
+type Faculty implements Identifiable {
+    id: Int!
+    name: String!
+    description: String
+    programs: [Program]!
+    program(programId: Int): Program
+}
+
+type Program implements Identifiable {
+    id: Int!
+    name: String!
+    description: String!
+}
+
+
+
