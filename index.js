@@ -15,7 +15,9 @@ const root = require('./resolvers/root');
 const app = express();
 // Normal REST endpoints
 const universities = require('./routes/universities');
+const health = require('./routes/health');
 app.use('/universities', universities);
+app.use('/health', health);
 
 // GraphQL endpoint
 app.use('/graphql', graphqlHTTP({

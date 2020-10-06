@@ -38,4 +38,4 @@ router.get('/:universityId/faculties/:facultyId/programs', function (req, res, n
         .catch(error => next(error))
 })
 
-module.exports = router
+module.exports = router;
